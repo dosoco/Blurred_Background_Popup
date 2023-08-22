@@ -1,0 +1,116 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: url("coderTools.jpg");
+    background-size: cover;
+    text-align: center;
+    transition: filter .7s;
+}
+
+h1{
+    color: dodgerblue;
+    font-size: 60px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn{
+    margin: 20px;
+    padding: 10px 20px;
+    width: 200px;
+    cursor: pointer;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    filter: brightness(.8);
+}
+
+.active.container{
+    filter: blur(5px) brightness(.7);
+}
+
+.popup-container{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: url("coding1.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all .7s;
+}
+
+h4{
+    margin: 10px 0;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+label{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.popup-btn{
+    background-color: goldenrod;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid;
+
+}
+
+.input{
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+input::placeholder{
+    color: lightblue;
+}
+
+.close-icon{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.close-icon:hover{
+    border: 1px solid;
+    background-color: lightblue;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+img{
+    padding: 5px;
+   
+}
+
+.active.popup-container{
+    visibility: hidden;
+    opacity: 0;
+    top: 10%;
+}
